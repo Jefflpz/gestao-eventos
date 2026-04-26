@@ -1,0 +1,79 @@
+/* src/styles/components/button.css */
+
+.btn-base {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-family: var(--font-primary);
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  border-radius: 12px;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+  text-decoration: none;
+}
+
+/* --- TAMANHOS --- */
+.btn-sm {
+  padding: 0.4rem 1rem;
+  font-size: var(--font-size-sm);
+  border-radius: 8px;
+}
+
+.btn-md {
+  padding: 0.65rem 1.5rem;
+  font-size: var(--font-size-base);
+  border-radius: 12px;
+}
+
+.btn-lg {
+  padding: 0.875rem 2rem;
+  font-size: var(--font-size-lg);
+  border-radius: 14px;
+}
+
+/* --- VARIANTES --- */
+
+/* Solid primário: Azul escuro sólido (igual à imagem: "Acessar Sistema") */
+.btn-solid {
+  background: var(--gradient-primary);
+  color: var(--color-primary-white);
+  box-shadow: 0 4px 14px color-mix(in srgb, var(--color-primary-blue) 35%, transparent);
+}
+
+.btn-solid:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px color-mix(in srgb, var(--color-primary-blue) 25%, transparent);
+}
+
+.btn-solid:active {
+  transform: translateY(0);
+}
+
+/* Ghost/outline: Transparente com borda (igual à imagem: "Saiba Mais") */
+.btn-ghost {
+  background-color: var(--color-primary-white);
+  color: var(--text-primary);
+  border: 1.5px solid var(--border-default);
+  box-shadow: none;
+}
+
+.btn-ghost:hover {
+  border-color: var(--color-secondary-royal-blue);
+  color: var(--color-secondary-royal-blue);
+  transform: translateY(-1px);
+}
+
+/* Gradiente: usando o token --gradient-accent */
+.btn-gradient {
+  background: var(--gradient-accent);
+  color: var(--color-primary-white);
+  box-shadow: 0 4px 14px color-mix(in srgb, var(--color-secondary-royal-blue) 30%, transparent);
+}
+
+.btn-gradient:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 15px color-mix(in srgb, var(--color-secondary-royal-blue) 25%, transparent);
+}

@@ -1,0 +1,77 @@
+/* src/styles/components/header.css */
+
+.app-header {
+  position: fixed;
+  top: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  max-width: 90rem;
+  border-radius: 20px;
+  z-index: 1000;
+  background-color: color-mix(in srgb, var(--color-primary-white) 80%, transparent);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 2px 20px color-mix(in srgb, var(--color-primary-blue) 8%, transparent);
+  border: 1px solid color-mix(in srgb, var(--color-primary-white) 60%, transparent);
+  padding: 0.75rem 1.5rem;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* Logo */
+.logo a {
+  display: flex;
+  align-items: center;
+}
+
+.logo-img {
+  height: 2rem;
+  width: auto;
+}
+
+/* Links */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.nav-links a {
+  color: var(--text-secondary);
+  font-size: var(--font-size-base);
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.nav-links a:hover {
+  color: var(--color-primary-blue);
+}
+
+.nav-links a.router-link-active {
+  color: var(--color-primary-blue);
+  font-weight: 700;
+}
+
+/* Botão de ação */
+.nav-action {
+  display: flex;
+  align-items: center;
+}
+/* RESPONSIVO */
+@media (max-width: 48rem) {
+  .app-header {
+    width: 92%;
+    padding: 0.75rem 1.25rem;
+  }
+
+  .nav-links {
+    display: none;
+  }
+}

@@ -1,0 +1,21 @@
+.info-box {
+  margin-top: var(--spacing-xl);
+  padding: var(--spacing-md);
+  background-color: var(--color-background);
+  border-left: 4px solid var(--color-primary);
+  border-radius: 0 var(--border-radius-md) var(--border-radius-md) 0;
+}
+
+.info-box h3 {
+  margin-bottom: var(--spacing-sm);
+  font-size: var(--font-size-base);
+}
+
+.info-box ul {
+  padding-left: var(--spacing-lg);
+}
+
+.info-box li {
+  margin-bottom: var(--spacing-xs);
+  color: var(--color-text-secondary);
+}

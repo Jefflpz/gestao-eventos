@@ -1,0 +1,256 @@
+/* FIRST PAGE */
+.initial-page {
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(
+    135deg,
+    color-mix(in srgb, var(--color-secondary-royal-blue) 18%, white) 0%,
+    white 49%,
+    color-mix(in srgb, var(--color-secondary-turquoise) 22%, white) 100%
+  );
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 6rem;
+}
+
+
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: clamp(2rem, 6vw, 10rem);
+  flex: 1;
+  width: 100%;
+  max-width: 90rem;
+  padding: 2rem clamp(2rem, 5vw, 10rem);
+  margin: 0 auto;
+}
+
+.texts {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.head-text {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
+
+.highlight {
+  background-image: var(--gradient-accent);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.buttons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.first-image {
+  width: min(40rem, 100%);
+  border-radius: 1.5rem;
+  background-color: var(--color-primary-white);
+  padding: 1rem;
+  box-shadow: 0 1.25rem 3.75rem color-mix(in srgb, var(--color-primary-blue) 15%, transparent);
+  object-fit: cover;
+  transform: rotate(3deg);
+  justify-self: center;
+}
+
+/* --- COMO FUNCIONA --- */
+.third-page {
+  background-color: var(--bg-primary);
+  padding: clamp(3rem, 6vw, 5rem) clamp(2rem, 6vw, 4rem);
+  text-align: center;
+}
+
+.third-page > * {
+  max-width: 90rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.title {
+  font-size: var(--font-size-3xl);
+  font-weight: 900;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  color: var(--text-secondary);
+  font-size: var(--font-size-base);
+  text-align: center;
+}
+
+.steps-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 0;
+  margin-top: 3rem;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+/* Linha pontilhada horizontal conectando os círculos */
+.steps-wrapper::before {
+  content: '';
+  position: absolute;
+  top: 2.625rem;
+  left: 20%;
+  right: 20%;
+  border-top: 2px dashed color-mix(in srgb, var(--color-secondary-sky-blue) 45%, transparent);
+  z-index: 0;
+}
+
+/* --- EXPERIÊNCIAS PERSONALIZADAS --- */
+.last-page {
+  background-image: linear-gradient(to right,
+    color-mix(in srgb, var(--color-secondary-ice-blue) 60%, transparent),
+    color-mix(in srgb, var(--color-secondary-ice-blue) 60%, transparent)
+  );
+  padding: clamp(3rem, 6vw, 5rem) clamp(2rem, 8vw, 8rem);
+}
+
+.last-page > * {
+  max-width: 90rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.head-title {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.exp-card {
+  background-color: var(--bg-primary);
+  border: 1px solid var(--border-default);
+  border-radius: 1rem;
+  padding: 2rem 2.5rem;
+  width: 100%;
+  max-width: 31.25rem;
+  box-shadow: 0 0.25rem 1.25rem color-mix(in srgb, var(--color-black) 5%, transparent);
+}
+
+.exp-card-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.exp-icon {
+  width: 2.875rem;
+  height: 2.875rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: var(--color-primary-white);
+}
+
+.admin-icon { background: var(--gradient-primary); }
+.stakeholder-icon { background-color: var(--color-secondary-dark-blue); }
+
+.exp-card-title {
+  font-size: var(--font-size-lg);
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.exp-benefits {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.exp-check {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+
+.check-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+  flex-shrink: 0;
+  color: var(--color-secondary-royal-blue);
+  margin-top: 0.125rem;
+}
+
+.exp-benefit-title {
+  font-size: var(--font-size-base);
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.exp-benefit-desc {
+  font-size: var(--font-size-sm);
+  color: var(--text-secondary);
+  margin: 0;
+  margin-top: 0.125rem;
+}
+
+/* --- RESPONSIVO --- */
+@media (max-width: 64rem) {
+  .content {
+    flex-direction: column;
+    text-align: left;
+    padding: 6rem 1.5rem 3rem;
+    align-items: flex-start;
+  }
+
+  .texts {
+    align-items: flex-start;
+  }
+
+  .first-image {
+    display: none;
+  }
+
+  .steps {
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 40rem) {
+  .head-text {
+    font-size: 2.25rem !important; /* Tamanho menor para mobile */
+    line-height: 1.1;
+  }
+
+  .first-image {
+    width: min(18rem, 90%);
+    transform: none;
+  }
+  
+  .buttons {
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+  }
+
+  .cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .exp-card {
+    max-width: 100%;
+  }
+}

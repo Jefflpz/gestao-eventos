@@ -1,0 +1,215 @@
+/* src/styles/features/auth/login.css */
+
+.login-page {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(
+    135deg,
+    color-mix(in srgb, var(--color-secondary-royal-blue) 18%, white) 0%,
+    white 49%,
+    color-mix(in srgb, var(--color-secondary-turquoise) 22%, white) 100%
+  );
+  padding: 2rem;
+}
+
+.login-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(2rem, 6vw, 8rem);
+  width: 100%;
+  max-width: 80rem;
+  margin: 0 auto;
+}
+
+/* --- LADO ESQUERDO: FORMULÁRIO --- */
+.login-content {
+  flex: 1;
+  max-width: 28rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  position: relative;
+}
+
+.back-button {
+  position: absolute;
+  top: -4.5rem;
+  left: -1rem;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+  transition: all 0.2s;
+}
+
+.back-button:hover {
+  background: rgba(255, 255, 255, 0.5);
+  transform: translateX(-4px);
+}
+
+.login-logo {
+  height: 3rem;
+  width: auto;
+  align-self: flex-start;
+}
+
+.login-header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.login-header h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--color-secondary-dark-blue);
+  margin: 0;
+}
+
+.login-header p {
+  color: var(--text-secondary);
+  font-size: 1rem;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-group label {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--color-secondary-royal-blue);
+}
+
+.input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-icon {
+  position: absolute;
+  left: 1rem;
+  color: #adb5bd;
+}
+
+.form-control {
+  width: 100%;
+  padding: 0.875rem 1rem 0.875rem 2.75rem;
+  border: 1px solid #e9ecef;
+  border-radius: 0.75rem;
+  background: white;
+  font-size: 1rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: var(--color-secondary-royal-blue);
+  box-shadow: 0 0 0 4px color-mix(in srgb, var(--color-secondary-royal-blue) 10%, transparent);
+}
+
+.forgot-password {
+  align-self: flex-end;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--color-secondary-royal-blue);
+  text-decoration: none;
+}
+
+.login-footer-text {
+  font-size: 0.875rem;
+  color: #6c757d;
+  text-align: center;
+  line-height: 1.4;
+}
+
+.login-footer-text span {
+  color: var(--color-secondary-royal-blue);
+  font-weight: 700;
+  cursor: pointer;
+}
+
+/* --- LADO DIREITO: CARD DE IMAGEM --- */
+.login-image-card {
+  flex: 1;
+  max-width: 30rem;
+  background: white;
+  border-radius: 2rem;
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.05);
+}
+
+.illustration {
+  width: 100%;
+  max-width: 26rem;
+  height: auto;
+  object-fit: contain;
+}
+
+.glass-overlay {
+  position: absolute;
+  bottom: 5rem;
+  width: 80%;
+  background: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  border-radius: 1.5rem;
+  padding: 2rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.04);
+}
+
+.glass-overlay h3 {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--color-secondary-dark-blue);
+  margin: 0;
+}
+
+.glass-overlay p {
+  font-size: 0.9375rem;
+  color: var(--color-secondary-dark-blue);
+  line-height: 1.5;
+  margin: 0;
+  opacity: 0.8;
+}
+
+/* RESPONSIVO */
+@media (max-width: 64rem) {
+  .login-image-card {
+    display: none;
+  }
+  .login-wrapper {
+    justify-content: center;
+  }
+}

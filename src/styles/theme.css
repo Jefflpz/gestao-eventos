@@ -1,0 +1,28 @@
+:root {
+  --bg-primary: var(--color-primary-white);
+  --bg-secondary: var(--color-gray-100);
+
+  --text-primary: var(--color-gray-800);
+  --text-secondary: var(--color-gray-600);
+
+  --button-primary-bg: var(--color-primary-blue);
+  --button-primary-hover: var(--color-secondary-dark-blue);
+  --button-primary-text: var(--color-primary-white);
+
+  --success: var(--color-primary-green);
+  --warning: var(--color-tertiary-orange);
+  --error: var(--color-tertiary-red);
+
+  --border-default: var(--color-gray-200);
+
+  --gradient-primary: linear-gradient(135deg, var(--color-primary-blue), var(--color-secondary-royal-blue));
+  --gradient-accent: linear-gradient(135deg, var(--color-secondary-royal-blue), var(--color-secondary-leaf-green));
+  --gradient-warm: linear-gradient(135deg, var(--color-tertiary-orange), var(--color-secondary-sky-blue));
+}
+
+/* 
+  (Tema Escuro)
+*/
+.dark {
+  /*-bg-primary: var(--color-gray-800); */
+}
